@@ -1,0 +1,23 @@
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 10px #fd01a9d4, 0 0 20px #fd01a9d4, 0 0 30px #fd01a9d4,
+    0 0 40px rgba(255, 0, 0, 0.8), 0 0 70px rgba(255, 0, 0, 0.8),
+    0 0 80px rgba(255, 0, 0, 0.8);
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 0 0 10px #fd01a9d4, 0 0 20px #fd01a9d4, 0 0 30px #fd01a9d4,
+      0 0 40px rgba(255, 0, 0, 0.8), 0 0 70px rgba(255, 0, 0, 0.8),
+      0 0 80px rgba(255, 0, 0, 0.8);
+  }
+  to {
+    text-shadow: 0 0 20px #fd01a9d4, 0 0 30px #fd01a9d4, 0 0 40px #fd01a9d4,
+      0 0 50px rgba(255, 0, 0, 0.8), 0 0 80px rgba(255, 0, 0, 0.8),
+      0 0 90px rgba(255, 0, 0, 0.8);
+  }
+}
+
+.animate-neon-glow {
+  animation: neon-glow 1s ease-in-out infinite alternate;
+}
