@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row justify-between items-center">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{duration: 0.5}}
+      className="flex flex-row justify-between items-center"
+    >
       <Logo />
       <Menu />
       <motion.button
@@ -16,11 +21,14 @@ const Navbar = () => {
         }}
         transition={{ duration: 0.5 }}
         whileTap={{ scale: 0.9 }}
-        className="text-white font-semibold text-[14px] md:text-[16px] rounded-md px-2 py-1 md:px-3 md:py-2"
+        initial={{
+          background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
+        }}
+        className="text-white font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2"
       >
         Comprar ahora
       </motion.button>
-    </div>
+    </motion.div>
   );
 };
 

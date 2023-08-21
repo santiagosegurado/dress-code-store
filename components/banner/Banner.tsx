@@ -2,6 +2,8 @@
 import styles from "./Banner.module.css";
 import CardBanner from "../card-banner/CardBanner";
 import { DM_Mono } from "next/font/google";
+import { TbArrowDownSquare } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 export const dmmono = DM_Mono({
   weight: ["300", "400", "500"],
@@ -12,7 +14,12 @@ export const dmmono = DM_Mono({
 const Banner = () => {
   return (
     <div className="text-white flex flex-col md:flex-row items-center h-[calc(100vh_-_250px)] z-20 gap-10 md:gap-2">
-      <div className="md:w-[50%] flex flex-col gap-3">
+      <motion.div
+        className="md:w-[50%] flex flex-col gap-3"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{duration: 0.5}}
+      >
         <h2
           className={`${dmmono.className} ${styles.wrap} leading-snug md:leading-snug text-3xl md:text-6xl`}
         >
@@ -22,8 +29,14 @@ const Banner = () => {
           &lt;dress-code/&gt; te ayuda a mostrar tu devoción por ese o esos
           lenguajes de programación que tanto usas y te acompañan dia a dia.
         </span>
-      </div>
-      <div className={`md:w-[50%] ${dmmono.className} flex items-end`}>
+        <TbArrowDownSquare className="mt-8 self-center text-[60px] animate-bounce opacity-80 cursor-pointer" />
+      </motion.div>
+      <motion.div
+        className={`md:w-[50%] ${dmmono.className} flex items-end`}
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{duration: 0.5}}
+      >
         <CardBanner
           img="/images/remerapy.svg"
           lang="Python"
@@ -59,7 +72,7 @@ const Banner = () => {
           radius="rounded-3xl"
           imgBg="bg-gray-300"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
