@@ -19,7 +19,7 @@ interface Props {
   padding: string;
   radius: string;
   margin?: string;
-  imgBg: string;
+  imgBg?: string;
 }
 
 

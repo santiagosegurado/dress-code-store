@@ -10,7 +10,7 @@ const HomePage = () => {
       <main className="px-5 md:px-14 py-5 md:py-10 flex flex-col gap-14 overflow-x-hidden">
         <Navbar />
 
-        <div className="flex flex-col gap-64">
+        <div className="flex flex-col gap-40">
           <Banner />
           <Spotlight />
         </div>

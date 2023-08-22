@@ -33,7 +33,6 @@ const SpotlightProduct = () => {
           gap="gap-4"
           padding="p-5"
           radius="rounded-3xl"
-          imgBg="bg-gray-300"
           key={i}
         />
       ))}
