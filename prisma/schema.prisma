@@ -14,7 +14,7 @@ datasource db {
 model Products {
   id String @id @default(cuid())
   title String 
-  price Int
+  price Decimal
   img String 
   category String
 }

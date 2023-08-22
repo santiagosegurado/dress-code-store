@@ -44,8 +44,6 @@ const Banner = () => {
           price="$10.00"
           width="w-[144px]"
           height="h-[190px]"
-          imgHeight={100}
-          imgWith={100}
           rotate={-6}
           title="Remera.py"
           fontTitle="text-[8px]"
@@ -62,8 +60,6 @@ const Banner = () => {
           price="$15.00"
           width="w-[300px] md:w-[416px]"
           height="h-[420px] md:h-[548px]"
-          imgHeight={415}
-          imgWith={432}
           rotate={6}
           title="Buzo.js"
           fontTitle="text-[19px]"
