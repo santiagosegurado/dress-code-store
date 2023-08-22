@@ -14,7 +14,7 @@ const Navbar = () => {
     >
       <Logo />
       <Menu />
-      <motion.button
+      <motion.span
         animate={{ background: "linear-gradient(to left, #FD76CB,  #FFAC30)" }}
         whileHover={{
           background: "linear-gradient(to left, #FFAC30, #FD76CB)",
@@ -24,10 +24,10 @@ const Navbar = () => {
         initial={{
           background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
         }}
-        className="text-white font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2"
+        className="text-white font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2 cursor-pointer"
       >
         Comprar ahora
-      </motion.button>
+      </motion.span>
     </motion.div>
   );
 };

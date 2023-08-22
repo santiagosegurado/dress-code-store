@@ -22,6 +22,7 @@ interface Props {
   imgBg: string;
 }
 
+
 const CardBanner = ({
   img,
   lang,
@@ -42,16 +43,8 @@ const CardBanner = ({
 }: Props) => {
   return (
     <motion.div
-      drag
-      dragConstraints={{
-        top: -20,
-        left: -20,
-        right: 20,
-        bottom: 20,
-      }}
       animate={{ rotate }}
-      className={`backdrop-blur-sm bg-white/10 ${padding} ${radius} flex flex-col ${gap} ${width} ${height} cursor-grab ${rotate} ${margin}`}
-
+      className={`backdrop-blur-sm bg-white/10 ${padding} ${radius} flex flex-col ${gap} ${width} ${height} cursor-pointer ${rotate} ${margin}`}
     >
       <div className="flex flex-row justify-between items-center">
         <h3 className={`${fontTitle}`}>{title}</h3>
