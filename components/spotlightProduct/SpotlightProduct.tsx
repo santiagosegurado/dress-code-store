@@ -13,14 +13,14 @@ const dmmono = DM_Mono({
 
 const SpotlightProduct = () => {
   const [products, setProducts] = useState([]);
-  const [layoutId, setLayoutId] = useState(null);
 
   useEffect(() => {
     const getProducts = async () => {
-      const resp = await fetch("http://localhost:3000/api/products");
+      // const resp = await fetch("http://localhost:3000/api/products");
+      const resp = await fetch(
+        "https://dress-code-store.vercel.app/api/products"
+      );
       const data = await resp.json();
-
-      console.log(data);
 
       return data.products;
     };
@@ -35,25 +35,24 @@ const SpotlightProduct = () => {
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {products &&
-        products.map((p: any) => (
-          <CardBanner
-            img={p.img}
-            lang={p.category}
-            price={`$${p.price}.00`}
-            width="w-[300px] md:w-[360px]"
-            height="h-[420px] md:h-[500px]"
-            rotate={0}
-            title={p.title}
-            fontTitle="text-[19px]"
-            fontFooter="text-[16px]"
-            gap="gap-4"
-            padding="p-5"
-            radius="rounded-3xl"
-            key={p.id}
-            id={p.id}
-          />
-        ))}
+      {products.map((p: any) => (
+        <CardBanner
+          img={p.img}
+          lang={p.category}
+          price={`$${p.price}.00`}
+          width="w-[300px] md:w-[360px]"
+          height="h-[420px] md:h-[500px]"
+          rotate={0}
+          title={p.title}
+          fontTitle="text-[19px]"
+          fontFooter="text-[16px]"
+          gap="gap-4"
+          padding="p-5"
+          radius="rounded-3xl"
+          key={p.id}
+          id={p.id}
+        />
+      ))}
     </motion.div>
   );
 };
