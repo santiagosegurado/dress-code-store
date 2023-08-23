@@ -9,17 +9,14 @@ export async function GET() {
     return NextResponse.json({ error: "No hay productos" }, { status: 404 });
   }
 
-  return NextResponse.json(
-    { products },
-    {
-      status: 201,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
-      },
-    }
-  );
+  return new Response(JSON.stringify(products), {
+    status: 201,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
+  });
 }
 
 export async function POST(req: Request) {

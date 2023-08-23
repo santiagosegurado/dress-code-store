@@ -16,13 +16,13 @@ const SpotlightProduct = () => {
 
   useEffect(() => {
     const getProducts = async () => {
-      // const resp = await fetch("http://localhost:3000/api/products");
-      const resp = await fetch(
-        "https://dress-code-store.vercel.app/api/products"
-      );
+      const resp = await fetch("http://localhost:3000/api/products");
+      // const resp = await fetch(
+      //   "https://dress-code-store.vercel.app/api/products"
+      // );
       const data = await resp.json();
 
-      return data.products;
+      return data;
     };
 
     getProducts().then(setProducts);
