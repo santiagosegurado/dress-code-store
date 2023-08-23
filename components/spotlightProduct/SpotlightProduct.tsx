@@ -22,7 +22,7 @@ const SpotlightProduct = () => {
       // );
       const data = await resp.json();
 
-      return data;
+      return data.products;
     };
 
     getProducts().then(setProducts);
