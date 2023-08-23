@@ -2,8 +2,8 @@
 import { DM_Mono } from "next/font/google";
 import CardBanner from "../card-banner/CardBanner";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { CardPopup } from "../card-popup/CardPopup";
+import { useEffect } from "react";
+import { useUIStore } from "../../store/uiStore";
 
 const dmmono = DM_Mono({
   weight: ["300", "400", "500"],
@@ -12,7 +12,9 @@ const dmmono = DM_Mono({
 });
 
 const SpotlightProduct = () => {
-  const [products, setProducts] = useState([]);
+  const { products, setProducts, getCategoties, categorySelected } = useUIStore(
+    (state) => state
+  );
 
   useEffect(() => {
     const getProducts = async () => {
@@ -25,8 +27,10 @@ const SpotlightProduct = () => {
       return data.products;
     };
 
-    getProducts().then(setProducts);
-  }, []);
+    getProducts()
+      .then(setProducts)
+      .then(() => getCategoties());
+  }, [setProducts, getCategoties]);
 
   return (
     <motion.div
@@ -35,24 +39,27 @@ const SpotlightProduct = () => {
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {products.map((p: any) => (
-        <CardBanner
-          img={p.img}
-          lang={p.category}
-          price={`$${p.price}.00`}
-          width="w-[300px] md:w-[360px]"
-          height="h-[420px] md:h-[500px]"
-          rotate={0}
-          title={p.title}
-          fontTitle="text-[19px]"
-          fontFooter="text-[16px]"
-          gap="gap-4"
-          padding="p-5"
-          radius="rounded-3xl"
-          key={p.id}
-          id={p.id}
-        />
-      ))}
+      {products
+        .filter((product) => product.category === categorySelected)
+        .map((p: any) => (
+          <CardBanner
+            img={p.img}
+            category={p.category}
+            price={`$${p.price}.00`}
+            width="w-[300px] md:w-[360px]"
+            height="h-[420px] md:h-[500px]"
+            rotate={0}
+            title={p.title}
+            fontTitle="text-[19px]"
+            fontFooter="text-[16px]"
+            gap="gap-4"
+            padding="p-5"
+            radius="rounded-3xl"
+            key={p.id}
+            id={p.id}
+            link={p.link}
+          />
+        ))}
     </motion.div>
   );
 };

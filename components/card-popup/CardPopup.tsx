@@ -2,6 +2,7 @@
 import { useUIStore } from "@/store/uiStore";
 import { motion } from "framer-motion";
 import { DM_Mono } from "next/font/google";
+import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
 
 const dmmono = DM_Mono({
@@ -19,7 +20,7 @@ export const CardPopup = () => {
 
   return (
     <div
-      className={`${dmmono.className} bg-[#ffffff46] w-[100%] h-[100vh] z-50 fixed top-0 right-0 flex justify-center items-center text-white`}
+      className={`${dmmono.className} bg-[#ffffff2c] w-[100%] h-[100vh] z-50 fixed top-0 right-0 flex justify-center items-center text-white`}
     >
       <motion.div
         className={`bg-[#262626f8] p-6 rounded-3xl flex flex-col gap-4 w-[300px] md:w-[416px] h-[420px] md:h-[548px] cursor-pointer`}
@@ -41,29 +42,31 @@ export const CardPopup = () => {
         <div className="flex flex-row justify-between">
           <div className={`flex flex-col text-[16px]`}>
             <span>Lang</span>
-            <span>{popup.lang}</span>
+            <span>{popup.category}</span>
           </div>
           <div className={`flex flex-col text-[16px]`}>
             <span>Oferta actual</span>
             <span>{popup.price}</span>
           </div>
         </div>
-        <motion.div
-          animate={{
-            background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
-          }}
-          whileHover={{
-            background: "linear-gradient(to left, #FFAC30, #FD76CB)",
-          }}
-          transition={{ duration: 0.5 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{
-            background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
-          }}
-          className="flex justify-center w-full p-1 rounded-md"
-        >
-          <span> Comprar </span>
-        </motion.div>
+        <Link href={popup.link} target="_blank">
+          <motion.div
+            animate={{
+              background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
+            }}
+            whileHover={{
+              background: "linear-gradient(to left, #FFAC30, #FD76CB)",
+            }}
+            transition={{ duration: 0.5 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{
+              background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
+            }}
+            className="flex justify-center w-full p-1 rounded-md"
+          >
+            <span > Comprar </span>
+          </motion.div>
+        </Link>
       </motion.div>
     </div>
   );

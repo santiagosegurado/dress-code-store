@@ -4,7 +4,7 @@ import { useUIStore } from "@/store/uiStore";
 
 interface Props {
   img: string;
-  lang: string;
+  category: string;
   price: string;
   height: string;
   width: string;
@@ -18,11 +18,12 @@ interface Props {
   margin?: string;
   imgBg?: string;
   id?: string;
+  link: string;
 }
 
 const CardBanner = ({
   img,
-  lang,
+  category,
   price,
   width,
   height,
@@ -36,6 +37,7 @@ const CardBanner = ({
   margin,
   imgBg,
   id,
+  link
 }: Props) => {
   const selectPopup = useUIStore((state) => state.selectPopup);
 
@@ -43,7 +45,7 @@ const CardBanner = ({
     <motion.div
       animate={{ rotate }}
       className={`backdrop-blur-sm bg-white/10 ${padding} ${radius} flex flex-col ${gap} ${width} ${height} cursor-pointer ${rotate} ${margin}`}
-      onClick={() => selectPopup({ img, lang, price, title, id })}
+      onClick={() => selectPopup({ img, category, price, title, id, link })}
       whileTap={{
         scale: 0.9,
       }}
@@ -62,7 +64,7 @@ const CardBanner = ({
       <div className="flex flex-row justify-between">
         <div className={`flex flex-col ${fontFooter}`}>
           <span>Lang</span>
-          <span>{lang}</span>
+          <span>{category}</span>
         </div>
         <div className={`flex flex-col ${fontFooter}`}>
           <span>Oferta actual</span>

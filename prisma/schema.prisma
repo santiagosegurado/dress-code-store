@@ -10,11 +10,11 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-
 model Products {
-  id String @id @default(cuid())
-  title String 
-  price Decimal
-  img String 
+  id       String  @id @default(cuid())
+  title    String
+  price    Decimal
+  img      String
   category String
+  link String @default("https://wa.link/s8scxe")
 }

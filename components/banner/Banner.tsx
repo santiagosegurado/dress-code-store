@@ -40,7 +40,7 @@ const Banner = () => {
       >
         <CardBanner
           img="/images/remerapy.svg"
-          lang="Python"
+          category="Python"
           price="$10.00"
           width="w-[144px]"
           height="h-[190px]"
@@ -53,10 +53,11 @@ const Banner = () => {
           radius="rounded-xl"
           margin="mr-[-30px]"
           imgBg="bg-blue-400"
+          link=""
         />
         <CardBanner
           img="/images/buzojs.svg"
-          lang="JavaScript"
+          category="JavaScript"
           price="$15.00"
           width="w-[300px] md:w-[416px]"
           height="h-[420px] md:h-[548px]"
@@ -68,6 +69,7 @@ const Banner = () => {
           padding="p-6"
           radius="rounded-3xl"
           imgBg="bg-gray-300"
+          link=""
         />
       </motion.div>
     </div>
