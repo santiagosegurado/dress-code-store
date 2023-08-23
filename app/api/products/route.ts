@@ -25,21 +25,21 @@ export async function GET(){
   return NextResponse.json({ products })
 }
 
-export async function POST(req: Request) {
-  const { title, price, img, category } = await req.json();
+// export async function POST(req: Request) {
+//   const { title, price, img, category } = await req.json();
 
-  const newProduct = await prisma.products.create({
-    data: {
-      title,
-      price,
-      img,
-      category,
-    },
-  });
+//   const newProduct = await prisma.products.create({
+//     data: {
+//       title,
+//       price,
+//       img,
+//       category,
+//     },
+//   });
 
-  if (!newProduct) {
-    return NextResponse.json({ error: "No se creo el producto correctamente" });
-  }
+//   if (!newProduct) {
+//     return NextResponse.json({ error: "No se creo el producto correctamente" });
+//   }
 
-  return NextResponse.json(newProduct);
-}
+//   return NextResponse.json(newProduct);
+// }
