@@ -25,8 +25,8 @@ export const CardPopup = () => {
       <motion.div
         className={`bg-[#262626f8] p-6 rounded-3xl flex flex-col gap-4 w-[300px] md:w-[416px] h-[420px] md:h-[548px] cursor-pointer`}
         layoutId={popup.id}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        // initial={{ opacity: 0, y: 20 }}
+        // whileInView={{ opacity: 1, y: 0 }}
       >
         <div className="flex flex-row justify-between items-center">
           <h3 className={`text-[19px]`}>{popup.title}</h3>

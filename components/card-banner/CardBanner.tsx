@@ -37,19 +37,22 @@ const CardBanner = ({
   margin,
   imgBg,
   id,
-  link
+  link,
 }: Props) => {
   const selectPopup = useUIStore((state) => state.selectPopup);
 
   return (
     <motion.div
-      animate={{ rotate }}
+      animate={{ rotate, scale: 1, opacity: 1 }}
       className={`backdrop-blur-sm bg-white/10 ${padding} ${radius} flex flex-col ${gap} ${width} ${height} cursor-pointer ${rotate} ${margin}`}
       onClick={() => selectPopup({ img, category, price, title, id, link })}
       whileTap={{
         scale: 0.9,
       }}
       layoutId={id}
+      layout
+      exit={{ scale: 0.8, opacity: 0 }}
+      transition={{ type: "spring", duration: 0.5 }}
     >
       <div className="flex flex-row justify-between items-center">
         <h3 className={`${fontTitle}`}>{title}</h3>

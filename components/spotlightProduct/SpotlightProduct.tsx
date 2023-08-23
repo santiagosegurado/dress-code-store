@@ -1,7 +1,7 @@
 "use client";
 import { DM_Mono } from "next/font/google";
 import CardBanner from "../card-banner/CardBanner";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import { useUIStore } from "../../store/uiStore";
 
@@ -39,27 +39,29 @@ const SpotlightProduct = () => {
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {products
-        .filter((product) => product.category === categorySelected)
-        .map((p: any) => (
-          <CardBanner
-            img={p.img}
-            category={p.category}
-            price={`$${p.price}.00`}
-            width="w-[300px] md:w-[360px]"
-            height="h-[420px] md:h-[500px]"
-            rotate={0}
-            title={p.title}
-            fontTitle="text-[19px]"
-            fontFooter="text-[16px]"
-            gap="gap-4"
-            padding="p-5"
-            radius="rounded-3xl"
-            key={p.id}
-            id={p.id}
-            link={p.link}
-          />
-        ))}
+      <AnimatePresence>
+        {products
+          .filter((product) => product.category === categorySelected)
+          .map((p: any) => (
+              <CardBanner
+                img={p.img}
+                category={p.category}
+                price={`$${p.price}.00`}
+                width="w-[300px] md:w-[360px]"
+                height="h-[420px] md:h-[500px]"
+                rotate={0}
+                title={p.title}
+                fontTitle="text-[19px]"
+                fontFooter="text-[16px]"
+                gap="gap-4"
+                padding="p-5"
+                radius="rounded-3xl"
+                id={p.id}
+                link={p.link}
+                key={p.id}
+              />
+          ))}
+      </AnimatePresence>
     </motion.div>
   );
 };
