@@ -1,7 +1,7 @@
 // "use client";
 /* eslint-disable @next/next/no-img-element */
 // import styles from "./Comunity.module.css";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Comunity = () => {
@@ -12,10 +12,10 @@ const Comunity = () => {
     >
       {/* <div className="h-[100%] w-full blur-3xl bg-[#2c1833cc] absolute top-0 right-0 "></div> */}
 
-      <header
-        // initial={{ opacity: 0, y: 20 }}
-        // whileInView={{ opacity: 1, y: 0 }}
-        // transition={{ duration: 0.5 }}
+      <motion.header
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
         className="flex flex-col items-center gap-2 z-30"
       >
         <span className="text-[#fffefda1] text-base font-medium">
@@ -24,12 +24,12 @@ const Comunity = () => {
         <span className="text-[#fffefdc5] text-xl font-semibold">
           Crea Y Vende Tus Propios Diseños
         </span>
-      </header>
+      </motion.header>
 
-      <section
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
-        // transition={{ duration: 0.5 }}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
         className="z-30 flex flex-col md:flex-row gap-9"
       >
         <article className="w-[350px] h-[300px] flex flex-col items-center bg-[#3737374d] justify-center p-16 gap-4 rounded-lg cursor-pointer">
@@ -76,38 +76,38 @@ const Comunity = () => {
             con el mundo
           </span>
         </article>
-      </section>
-      <div
-        // initial={{ opacity: 0, y: 20 }}
-        // whileInView={{ opacity: 1, y: 0 }}
-        // transition={{ duration: 0.5 }}
+      </motion.section>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
         className="z-30 flex flex-row items-center gap-5"
       >
-        <span
-          // animate={{
-          //   background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
-          // }}
-          // whileHover={{
-          //   background: "linear-gradient(to left, #FFAC30, #FD76CB)",
-          // }}
-          // transition={{ duration: 0.5 }}
-          // whileTap={{ scale: 0.9 }}
-          // initial={{
-          //   background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
-          // }}
+        <motion.span
+          animate={{
+            background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
+          }}
+          whileHover={{
+            background: "linear-gradient(to left, #FFAC30, #FD76CB)",
+          }}
+          transition={{ duration: 0.5 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{
+            background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
+          }}
           className="text-white font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2 cursor-pointer"
         >
           <Link href={"#"}>Crear ahora</Link>
-        </span>
-        <span
-          // whileTap={{ scale: 0.9 }}
+        </motion.span>
+        <motion.span
+          whileTap={{ scale: 0.9 }}
           className="text-[#cccccc91] font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2 cursor-pointer hover:text-white transition-all duration-500"
         >
           <Link href={"https://smartmockups.com/es/mockup/e7Cvg5E%24nr2"}>
             Ver mockups
           </Link>
-        </span>
-      </div>
+        </motion.span>
+      </motion.div>
     </div>
   );
 };
