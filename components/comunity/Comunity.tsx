@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 /* eslint-disable @next/next/no-img-element */
 // import styles from "./Comunity.module.css";
 import { motion } from "framer-motion";
