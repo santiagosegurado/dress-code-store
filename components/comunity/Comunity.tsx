@@ -12,10 +12,10 @@ const Comunity = () => {
     >
       <div className="h-[100%] w-full blur-3xl bg-[rgba(44,24,51,0.8)] absolute top-0 right-0 "></div>
 
-      <motion.header
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      <header
+        // initial={{ opacity: 0, y: 20 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 0.5 }}
         className="flex flex-col items-center gap-2 z-30"
       >
         <span className="text-[#fffefda1] text-base font-medium">
@@ -24,7 +24,7 @@ const Comunity = () => {
         <span className="text-[#fffefdc5] text-xl font-semibold">
           Crea Y Vende Tus Propios Diseños
         </span>
-      </motion.header>
+      </header>
 
       <section
         // initial={{ opacity: 0 }}
@@ -77,10 +77,10 @@ const Comunity = () => {
           </span>
         </article>
       </section>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      <div
+        // initial={{ opacity: 0, y: 20 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 0.5 }}
         className="z-30 flex flex-row items-center gap-5"
       >
         <Link href={"#"}>
@@ -109,7 +109,7 @@ const Comunity = () => {
             Ver mockups
           </motion.span>
         </Link>
-      </motion.div>
+      </div>
     </div>
   );
 };
