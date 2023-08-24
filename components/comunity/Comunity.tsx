@@ -26,10 +26,10 @@ const Comunity = () => {
         </span>
       </motion.header>
 
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+      <section
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // transition={{ duration: 0.5 }}
         className="z-30 flex flex-col md:flex-row gap-9"
       >
         <article className="w-[350px] h-[300px] flex flex-col items-center bg-[#3737374d] justify-center p-16 gap-4 rounded-lg hover:drop-shadow-[0_0px_125px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer">
@@ -76,7 +76,7 @@ const Comunity = () => {
             con el mundo
           </span>
         </article>
-      </motion.section>
+      </section>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
