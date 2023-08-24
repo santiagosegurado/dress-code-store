@@ -10,7 +10,7 @@ const Comunity = () => {
       className="text-white flex flex-col items-center relative gap-10 justify-center mb-44"
       id="comunity"
     >
-      <div className="h-[100%] w-full blur-3xl bg-[rgba(44,24,51,0.8)] absolute top-0 right-0 "></div>
+      {/* <div className="h-[100%] w-full blur-3xl bg-[rgba(44,24,51,0.8)] absolute top-0 right-0 "></div> */}
 
       <header
         // initial={{ opacity: 0, y: 20 }}
@@ -77,7 +77,7 @@ const Comunity = () => {
           </span>
         </article>
       </section> */}
-      <div
+      {/* <div
         // initial={{ opacity: 0, y: 20 }}
         // whileInView={{ opacity: 1, y: 0 }}
         // transition={{ duration: 0.5 }}
@@ -107,7 +107,7 @@ const Comunity = () => {
             Ver mockups
           </Link>
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };
