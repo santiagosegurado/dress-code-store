@@ -43,23 +43,23 @@ const SpotlightProduct = () => {
         {products
           .filter((product) => product.category === categorySelected)
           .map((p: any) => (
-              <CardBanner
-                img={p.img}
-                category={p.category}
-                price={`$${p.price}.00`}
-                width="w-[300px] md:w-[360px]"
-                height="h-[420px] md:h-[500px]"
-                rotate={0}
-                title={p.title}
-                fontTitle="text-[19px]"
-                fontFooter="text-[16px]"
-                gap="gap-4"
-                padding="p-5"
-                radius="rounded-3xl"
-                id={p.id}
-                link={p.link}
-                key={p.id}
-              />
+            <CardBanner
+              img={p.img}
+              category={p.category}
+              price={`$${p.price}.00`}
+              width="w-[300px] md:w-[360px]"
+              height="h-[420px] md:h-[500px]"
+              rotate={0}
+              title={p.title}
+              fontTitle="text-[19px]"
+              fontFooter="text-[16px]"
+              gap="gap-4"
+              padding="p-5"
+              radius="rounded-3xl"
+              id={p.id}
+              link={p.link}
+              key={p.id}
+            />
           ))}
       </AnimatePresence>
     </motion.div>

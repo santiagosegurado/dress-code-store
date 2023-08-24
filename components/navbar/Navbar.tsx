@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Logo from "../logo/Logo";
 import { Menu } from "../menu/Menu";
 import { motion } from "framer-motion";
@@ -26,7 +27,9 @@ const Navbar = () => {
         }}
         className="text-white font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2 cursor-pointer"
       >
-        Comprar ahora
+        <Link href={"#spotlight"}>
+          Comprar ahora
+        </Link>
       </motion.span>
     </motion.div>
   );

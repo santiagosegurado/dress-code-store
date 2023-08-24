@@ -1,5 +1,6 @@
 // import styles from "./Menu.module.css";
 import { motion } from "framer-motion";
+import Link from "next/link";
 export const Menu = () => {
   return (
     <div className="flex-row gap-4 text-white text-[19px] hidden md:flex">
@@ -15,14 +16,14 @@ export const Menu = () => {
         whileTap={{ scale: 0.3 }}
         className={`opacity-70 cursor-pointer hover:opacity-100 transition-all duration-300`}
       >
-        Store
+        <Link href={"#spotlight"}>Store</Link>
       </motion.span>
       <motion.span
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.3 }}
         className={`opacity-70 cursor-pointer hover:opacity-100 transition-all duration-300`}
       >
-        Custom
+        <Link href={"#comunity"}>Comunity</Link>
       </motion.span>
       <motion.span
         whileHover={{ scale: 1.1 }}
@@ -31,7 +32,6 @@ export const Menu = () => {
       >
         Contacto
       </motion.span>
-      
     </div>
   );
 };

@@ -7,7 +7,12 @@ const SpotlightMenu = () => {
   );
 
   return (
-    <motion.div className="text-white flex flex-row md:justify-center gap-12 w-full overflow-scroll">
+    <motion.div
+      className="text-white flex flex-row md:justify-center gap-12 w-full overflow-scroll"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {categories.map((category) => (
         <motion.div
           animate={{

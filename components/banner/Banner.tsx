@@ -4,7 +4,7 @@ import CardBanner from "../card-banner/CardBanner";
 import { DM_Mono } from "next/font/google";
 import { TbArrowDownCircle } from "react-icons/tb";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 
 const dmmono = DM_Mono({
   weight: ["300", "400", "500"],
@@ -19,7 +19,7 @@ const Banner = () => {
         className="md:w-[50%] flex flex-col gap-3"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{duration: 0.5}}
+        transition={{ duration: 0.5 }}
       >
         <h2
           className={`${dmmono.className} ${styles.wrap} leading-snug md:leading-snug text-3xl md:text-6xl`}
@@ -30,13 +30,15 @@ const Banner = () => {
           &lt;dress-code/&gt; te ayuda a mostrar tu devoción por ese o esos
           lenguajes de programación que tanto usas y te acompañan dia a dia.
         </span>
-        <TbArrowDownCircle className="mt-8 self-center text-[60px] animate-bounce opacity-80 cursor-pointer" />
+        <Link href={"#spotlight"} className="self-center">
+          <TbArrowDownCircle className="mt-8 text-[60px] animate-bounce opacity-80 cursor-pointer" />
+        </Link>
       </motion.div>
       <motion.div
         className={`md:w-[50%] ${dmmono.className} flex items-end`}
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{duration: 0.5}}
+        transition={{ duration: 0.5 }}
       >
         <CardBanner
           img="/images/remerapy.svg"
