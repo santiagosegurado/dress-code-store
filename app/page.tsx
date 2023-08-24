@@ -2,7 +2,7 @@ import Banner from "@/components/banner/Banner";
 import Navbar from "../components/navbar/Navbar";
 import Spotlight from "@/components/spotlight/Spotlight";
 import { CardPopup } from "@/components/card-popup/CardPopup";
-// import Comunity from "@/components/comunity/Comunity";
+import Comunity from "@/components/comunity/Comunity";
 
 const HomePage = () => {
   return (
@@ -16,7 +16,7 @@ const HomePage = () => {
           <div className="flex flex-col gap-40">
             <Banner />
             <Spotlight />
-            {/* <Comunity/> */}
+            <Comunity/>
           </div>
         </main>
       </div>
