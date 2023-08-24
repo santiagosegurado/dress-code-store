@@ -1,7 +1,7 @@
-"use client";
+// "use client";
 /* eslint-disable @next/next/no-img-element */
 // import styles from "./Comunity.module.css";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Comunity = () => {
@@ -32,7 +32,7 @@ const Comunity = () => {
         // transition={{ duration: 0.5 }}
         className="z-30 flex flex-col md:flex-row gap-9"
       >
-        <article className="w-[350px] h-[300px] flex flex-col items-center bg-[#3737374d] justify-center p-16 gap-4 rounded-lg hover:drop-shadow-[0_0px_125px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer">
+        <article className="w-[350px] h-[300px] flex flex-col items-center bg-[#3737374d] justify-center p-16 gap-4 rounded-lg cursor-pointer">
           <div className="flex flex-col gap-2 justify-center items-center">
             <img
               src="/images/crearimg.svg"
@@ -46,7 +46,7 @@ const Comunity = () => {
             Deja volar tu imaginación y crea la prenda que mas se adecue a ti.
           </span>
         </article>
-        <article className="w-[350px] h-[300px] flex flex-col items-center bg-[#3737374d] justify-center p-16 gap-4 rounded-lg hover:drop-shadow-[0_0px_125px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer">
+        <article className="w-[350px] h-[300px] flex flex-col items-center bg-[#3737374d] justify-center p-16 gap-4 rounded-lg cursor-pointer">
           <div className="flex flex-col gap-2 justify-center items-center">
             <img
               src="/images/subirimg.svg"
@@ -61,7 +61,7 @@ const Comunity = () => {
             formulario
           </span>
         </article>
-        <article className="w-[350px] h-[300px] flex flex-col items-center bg-[#3737374d] justify-center p-16 gap-4 rounded-lg hover:drop-shadow-[0_0px_125px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer">
+        <article className="w-[350px] h-[300px] flex flex-col items-center bg-[#3737374d] justify-center p-16 gap-4 rounded-lg cursor-pointer">
           <div className="flex flex-col gap-2 justify-center items-center">
             <img
               src="/images/comunidadimg.svg"
