@@ -83,32 +83,30 @@ const Comunity = () => {
         // transition={{ duration: 0.5 }}
         className="z-30 flex flex-row items-center gap-5"
       >
-        <Link href={"#"}>
-          <motion.span
-            animate={{
-              background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
-            }}
-            whileHover={{
-              background: "linear-gradient(to left, #FFAC30, #FD76CB)",
-            }}
-            transition={{ duration: 0.5 }}
-            whileTap={{ scale: 0.9 }}
-            initial={{
-              background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
-            }}
-            className="text-white font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2 cursor-pointer"
-          >
-            Crear ahora
-          </motion.span>
-        </Link>
-        <Link href={"https://smartmockups.com/es/mockup/e7Cvg5E%24nr2"}>
-          <motion.span
-            whileTap={{ scale: 0.9 }}
-            className="text-[#cccccc91] font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2 cursor-pointer hover:text-white transition-all duration-500"
-          >
+        <span
+          // animate={{
+          //   background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
+          // }}
+          // whileHover={{
+          //   background: "linear-gradient(to left, #FFAC30, #FD76CB)",
+          // }}
+          // transition={{ duration: 0.5 }}
+          // whileTap={{ scale: 0.9 }}
+          // initial={{
+          //   background: "linear-gradient(to left, #FD76CB,  #FFAC30)",
+          // }}
+          className="text-white font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2 cursor-pointer"
+        >
+          <Link href={"#"}>Crear ahora</Link>
+        </span>
+        <span
+          // whileTap={{ scale: 0.9 }}
+          className="text-[#cccccc91] font-semibold text-[14px] md:text-[16px] rounded-md px-3 py-2 cursor-pointer hover:text-white transition-all duration-500"
+        >
+          <Link href={"https://smartmockups.com/es/mockup/e7Cvg5E%24nr2"}>
             Ver mockups
-          </motion.span>
-        </Link>
+          </Link>
+        </span>
       </div>
     </div>
   );
