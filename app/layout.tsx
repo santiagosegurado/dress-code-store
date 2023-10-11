@@ -1,3 +1,4 @@
+import Script from "next/script";
 import "./globals.css";
 import { Quicksand } from "next/font/google";
 
@@ -20,6 +21,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={quicksand.className}>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-577947023"></Script>
+      <Script id="google-analytics">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-577947023');
+        `}
+      </Script>
       <body>{children}</body>
     </html>
   );
